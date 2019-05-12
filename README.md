@@ -3,7 +3,7 @@ Web Programming Projects
 
 | Project       | Description    |Run Command   | Dev Command |
 | ------------- | -------------- |------------- | ----------- |
-| Portfolio     | Final Project  | ´node server  | npm run dev |
+| Portfolio     | Final Project  | node server  | npm run dev |
 
 # Installing Dependecies
 
