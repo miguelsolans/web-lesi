@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Panel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <%- include('partials/navbar') %>
+</div>
+    <div class="container">
+        <h1><center>Admin Panel</center></h1>
+        <!-- Add new Education -->
+        <div class="panel panel-success">
+            <div class="panel-heading">New Education</div>
+            <div class="panel-body">
+                <form action="/newEducation" method="POST">
+                    <label>School</label>
+                    <br>
+                    <input type="text" placeholder="school" name="school">
+                    <br>
+                    <label>Course</label>
+                    <br>
+                    <input type="text" placeholder="course" name="course">
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Add new Job -->
+        <div class="panel panel-info">
+            <div class="panel-heading">New Job</div>
+            <div class="panel-body">
+                <form action="/newJob" method="POST">
+                    <label>Company</label>
+                    <br>
+                    <input type="text" placeholder="company" name="company">
+                    <br>
+                    <label>Position Held</label>
+                    <br>
+                    <input type="text" placeholder="description" name="description">
+                    <br>
+                    <label>Still Working On?</label>
+                    <br>
+                    <select name="flag">
+                        <option value="true">True</option>
+                        <option value="false">False</option>
+                    </select>
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
