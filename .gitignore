@@ -9,3 +9,4 @@ node_modules/
 .env.production.local
 .DS_Store
 portfolio/.idea/vcs.xml
+portfolio/.idea/workspace.xml
