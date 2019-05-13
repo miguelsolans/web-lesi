@@ -8,4 +8,5 @@ Web Programming Projects
 # Installing Dependecies
 
 To install dependecies, run the following command
-`npm install` 
+
+`$ npm install` 
