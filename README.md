@@ -5,7 +5,7 @@ Web Programming Projects
 | ------------- | -------------- |------------- | ----------- | --------- |
 | Portfolio     | Final Project  | node server  | npm run dev | 3000      |
 
-# Installing Dependecies
+# Installing Dependencies
 
 To install dependecies, run the following command
 
