@@ -41,10 +41,6 @@ MongoClient.connect('mongodb://localhost:27017', (err, client) => {
 //     res.sendFile(__dirname + "/index.html");
 // });
 
-//The 404 Route (ALWAYS Keep this as the last route)
-app.get('*', function(req, res){
-    res.render('404.ejs');
-});
 
 app.get('/', (req, res) => {
     var education = {};
@@ -95,7 +91,7 @@ app.post('/newEducation', (req, res) => {
         console.log("New Education Added");
     });
 });
-app.post('/newJob', (req, res) => {
+app.post('/admin', (req, res) => {
     console.log(req.body);
 
     var job = {
@@ -117,4 +113,9 @@ app.get('/test', function(req, res) {
     db.collection('education').find().toArray(function(err, result) {
         console.log(result);
     });
+});
+
+//The 404 Route (ALWAYS Keep this as the last route)
+app.get('*', function(req, res){
+    res.render('404.ejs');
 });
