@@ -42,9 +42,9 @@ MongoClient.connect('mongodb://localhost:27017', (err, client) => {
 // });
 
 //The 404 Route (ALWAYS Keep this as the last route)
-// app.get('*', function(req, res){
-//     res.render('404.ejs');
-// });
+app.get('*', function(req, res){
+    res.render('404.ejs');
+});
 
 app.get('/', (req, res) => {
     var education = {};
