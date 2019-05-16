@@ -67,7 +67,11 @@ app.get('/login', (req, res) => {
     res.render('login.ejs');
 });
 
-app.post('/login', (req, res) => {
+app.get('/forgot', (req, res) => {
+    res.send('<h3>Reset Password</h3>');
+});
+
+app.post('/admin', (req, res) => {
     console.log(req.body);
     // SELECT * FROM users WHERE username = something and password = somethingElse
     db.collection('users').find({username: req.body.username, password: req.body.password}).toArray(function(err, result) {
