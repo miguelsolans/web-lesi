@@ -59,6 +59,12 @@ app.get('/', (req, res) => {
     });
 });
 
+app.get('/edit-education', (req, res) => {
+    console.log("Editing Education");
+
+    res.render('edit-education.ejs');
+});
+
 app.get('/login', (req, res) => {
     res.render('login.ejs');
 });

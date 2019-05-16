@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfe079f8-a7d4-4425-82c7-23f465cb0ee7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/portfolio/views/partials/admin/create/new-education.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/views/partials/admin/create/new-job.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/views/partials/admin/delete/delete-education.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/views/partials/admin/delete/delete-job.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/views/partials/settings.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/views/edit-education.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/views/admin.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views/admin.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views/login.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/views/partials/credentials.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views/partials/credentials.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/views/partials/navbar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views/partials/navbar.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/views/partials/resetpassword.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views/partials/resetpassword.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,10 +19,44 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portfolio/views/index.ejs">
+        <entry file="file://$PROJECT_DIR$/portfolio/views/partials/navbar.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="51" column="36" lean-forward="true" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="37" />
+            <state relative-caret-position="114">
+              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/portfolio/views/login.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/portfolio/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/portfolio/views/edit-education.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+              <folding>
+                <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#4;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,15 +64,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/portfolio/views/admin.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="375">
+              <caret line="22" column="10" lean-forward="true" selection-start-line="12" selection-end-line="22" selection-end-column="10" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/portfolio/views/partials/settings.ejs">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -71,12 +92,13 @@
         <option value="$PROJECT_DIR$/portfolio/views/index.ejs" />
         <option value="$PROJECT_DIR$/portfolio/views/partials/credentials.ejs" />
         <option value="$PROJECT_DIR$/portfolio/views/partials/resetpassword.ejs" />
-        <option value="$PROJECT_DIR$/portfolio/views/partials/navbar.ejs" />
-        <option value="$PROJECT_DIR$/portfolio/views/login.ejs" />
-        <option value="$PROJECT_DIR$/portfolio/server.js" />
         <option value="$PROJECT_DIR$/portfolio/views/partials/admin/create/new-education.ejs" />
         <option value="$PROJECT_DIR$/portfolio/views/partials/admin/create/new-job.ejs" />
         <option value="$PROJECT_DIR$/portfolio/views/admin.ejs" />
+        <option value="$PROJECT_DIR$/portfolio/views/login.ejs" />
+        <option value="$PROJECT_DIR$/portfolio/views/partials/navbar.ejs" />
+        <option value="$PROJECT_DIR$/portfolio/server.js" />
+        <option value="$PROJECT_DIR$/portfolio/views/edit-education.ejs" />
       </list>
     </option>
   </component>
@@ -150,7 +172,7 @@
       <workItem from="1557950382813" duration="1823000" />
       <workItem from="1558001835230" duration="478000" />
       <workItem from="1558012535697" duration="12000" />
-      <workItem from="1558012618641" duration="1592000" />
+      <workItem from="1558012618641" duration="2904000" />
     </task>
     <task id="LOCAL-00001" summary="Update Wiki">
       <created>1557770769483</created>
@@ -184,7 +206,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5433000" />
+    <option name="totallyTimeSpent" value="6745000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -228,13 +250,6 @@
     <entry file="file://$PROJECT_DIR$/portfolio/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/public/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4347">
-          <caret line="189" column="39" lean-forward="true" selection-start-line="189" selection-start-column="39" selection-end-line="189" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -252,24 +267,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/views/login.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/portfolio/views/404.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="93" column="16" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -281,13 +282,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/portfolio/views/partials/admin/delete/delete-job.ejs">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/views/partials/navbar.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/portfolio/views/partials/admin/create/new-education.ejs">
       <provider selected="true" editor-type-id="text-editor">
@@ -313,6 +307,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="150" column="40" selection-start-line="150" selection-start-column="40" selection-end-line="150" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/views/partials/settings.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/portfolio/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -320,15 +324,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/views/admin.ejs">
+    <entry file="file://$PROJECT_DIR$/portfolio/views/login.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="227">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/views/partials/settings.ejs">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/portfolio/views/partials/navbar.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/views/admin.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="22" column="10" lean-forward="true" selection-start-line="12" selection-end-line="22" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/views/edit-education.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#4;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
