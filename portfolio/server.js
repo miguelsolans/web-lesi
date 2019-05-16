@@ -43,8 +43,6 @@ MongoClient.connect('mongodb://localhost:27017', (err, client) => {
 
 
 app.get('/', (req, res) => {
-    var education = {};
-    var jobs = {};
     db.collection('education').find().toArray((err, result) => {
         if (err) console.log(err);
 
@@ -62,7 +60,13 @@ app.get('/', (req, res) => {
 app.get('/edit-education', (req, res) => {
     console.log("Editing Education");
 
-    res.render('edit-education.ejs');
+    db.collection('education').find().toArray((err, result) => {
+        if (err) console.log(err);
+
+        res.render('edit-education.ejs', {
+            education: result
+        });
+    });
 });
 
 app.get('/login', (req, res) => {

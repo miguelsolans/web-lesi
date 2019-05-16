@@ -22,39 +22,17 @@
             <tr>
                 <th scope="col">School Name</th>
                 <th scope="col">Course Name</th>
-                <th scope="col">Edit</th>
+                <th scope="col"> </th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>Name 1</td>
-                <td>Course 1</td>
-                <td>Edit</td>
-            </tr>
-            <tr>
-                <td>Name 1</td>
-                <td>Course 1</td>
-                <td>Edit</td>
-            </tr>
-
-            <tr>
-                <td>Name 1</td>
-                <td>Course 1</td>
-                <td>Edit</td>
-            </tr>
-
-            <tr>
-                <td>Name 1</td>
-                <td>Course 1</td>
-                <td>Edit</td>
-            </tr>
-
-            <tr>
-                <td>Name 1</td>
-                <td>Course 1</td>
-                <td>Edit</td>
-            </tr>
-
+            <% for(var i in education) {%>
+                <tr class="education">
+                    <td><%= education[i].school %></td>
+                    <td><%= education[i].course %></td>
+                    <td><a href="#">Edit</a></td>
+                </tr>
+            <% } %>
             </tbody>
         </table>
     </div>
