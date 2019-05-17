@@ -44,36 +44,35 @@ requirejs([
             });
 
             /**
-             * Get certificates images
+             * Get Certificates album images
              */
             // 331562370879407?fields=picture
             // 331562370879407?fields=photos{name,images}
             // As maiores imagens vêm sempre em images[0].source
-            FB.api('331562370879407?fields=photos{picture,name}', function(data) {
+            FB.api('331562370879407?fields=photos{name,images}', function(data) {
                 //console.dir(data);
                 var photos = data.photos.data;
                 for(var i in photos) {
-                    var img = "<img src=" + photos[i].picture + ">";
+                    var img = "<div class='col-sm'><img class='fb-image' src=" + photos[i].images[0].source + "></div>";
 
 
                     document.getElementById('certificates-img').innerHTML += img;
 
-                    var url;
-                    var string = getLink(photos[i].name);
-
-                    if(string) {
-                        url = "<br><a href='" + string[0] + "'>Link</a>";
-                        document.getElementById('certificates-img').innerHTML += url;
-                    }
+                    // var url;
+                    // var string = getLink(photos[i].name);
+                    //
+                    // if(string) {
+                    //     url = "<br><a href='" + string[0] + "'>Link</a>";
+                    //     document.getElementById('certificates-img').innerHTML += url;
+                    // }
                 }
-
-                //var photo = "<img src=" + data.picture.data.url + ">";
-                //document.getElementById('certificates-img').innerHTML += photo;
 
             });
 
+            /**
+             * Get Projects album pictures
+             */
             FB.api('332124090823235?fields=photos{picture,name}', function(data) {
-                // console.log(data);
 
                 var photos = data.photos.data;
 
@@ -94,34 +93,13 @@ requirejs([
 
             });
 
-            // FB.api('332124090823235?fields=picture', function (data) {
-            //     var photo = "<img src=" + data.picture.data.url + ">";
-            //
-            //     document.getElementById('projects-img').innerHTML += photo;
-            // });
+
             /**
              * Get page name
              */
             FB.api("/325105178191793?fields=name", function(data) {
                 document.getElementById('name').innerText = data.name;
             });
-
-            // FB.ui({
-            //     method: 'share',
-            //     href: 'https://developers.facebook.com/docs/',
-            //     quote: 'Hello World!'
-            // }, function(response){
-            //     console.log("Share Response:" + response);
-            // });
-
-
-            // FB.api(`/325105178191793/photos`, 'post', params, (response) => {
-            //     if (response && response.error) {
-            //         //upload failed
-            //     } else {
-            //         //upload successful
-            //     }
-            // });
 
 
         } else if (response.status === 'not_authorized') {
@@ -152,22 +130,6 @@ requirejs([
         }
     });
 
-    // $.getJSON('https://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&user=miguelsolans&api_key=b9704a63e108fe1e52d55c0226ded89e&format=json', function(data) {
-    //     console.log(data);
-    //
-    //     for(let i = 0; i < 4; i++) {
-    //         var imgTag = "<img src=" + data.weeklyalbumchart.album[i].image[3]["#text"] + ">";
-    //         var artistInfo = "<p>" + data.weeklyalbumchart.album[i].artist.name +"</p>";
-    //         var playCount = "<p>" + data.weeklyalbumchart.album[i].playcount + "</p>";
-    //         document.getElementById('music').innerHTML += imgTag;
-    //         document.getElementById('music').innerHTML += artistInfo;
-    //     }
-    // });
-
-    // $.getJSON('https://ws.audioscrobbler.com/2.0/?method=user.gettoptags&user=miguelsolans&api_key=b9704a63e108fe1e52d55c0226ded89e&format=json', function(data) {
-    //     console.log("Musical Interests");
-    //     console.log(data);
-    // });
 
 
     // Instagram feed
