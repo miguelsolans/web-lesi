@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dfe079f8-a7d4-4425-82c7-23f465cb0ee7" name="Default Changelist" comment="" />
+    <list default="true" id="dfe079f8-a7d4-4425-82c7-23f465cb0ee7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/public/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views/index.ejs" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,18 +22,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portfolio/views/partials/navbar.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/portfolio/views/login.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
+            <state relative-caret-position="874">
               <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
@@ -34,8 +33,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/portfolio/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="54" column="14" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+            <state relative-caret-position="223">
+              <caret line="147" column="25" selection-start-line="147" selection-start-column="25" selection-end-line="147" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/portfolio/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -48,8 +56,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/portfolio/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+            <state relative-caret-position="2001">
+              <caret line="87" column="54" selection-start-line="87" selection-start-column="54" selection-end-line="87" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/portfolio/public/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -57,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/portfolio/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+            <state relative-caret-position="161">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -66,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/portfolio/views/edit-education.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="37" column="10" lean-forward="true" selection-end-line="40" selection-end-column="7" />
+            <state relative-caret-position="851">
+              <caret line="37" column="10" selection-end-line="40" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -75,7 +92,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/portfolio/views/partials/admin/delete/delete-education.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
+            <state relative-caret-position="736">
               <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
             </state>
           </provider>
@@ -92,6 +109,7 @@
       <find>login</find>
       <find>link</find>
       <find>index</find>
+      <find>express.static</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -100,7 +118,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/portfolio/views/partials/credentials.ejs" />
         <option value="$PROJECT_DIR$/portfolio/views/partials/resetpassword.ejs" />
         <option value="$PROJECT_DIR$/portfolio/views/partials/admin/create/new-education.ejs" />
@@ -111,16 +128,18 @@
         <option value="$PROJECT_DIR$/portfolio/views/edit-education.ejs" />
         <option value="$PROJECT_DIR$/portfolio/views/partials/admin/delete/delete-education.ejs" />
         <option value="$PROJECT_DIR$/portfolio/public/css/style.css" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/portfolio/views/index.ejs" />
         <option value="$PROJECT_DIR$/portfolio/public/js/main.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/portfolio/server.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -130,6 +149,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,50 +168,10 @@
               <item name="portfolio" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="web-lesi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-lesi" type="462c0819:PsiDirectoryNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-lesi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-lesi" type="462c0819:PsiDirectoryNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-lesi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-lesi" type="462c0819:PsiDirectoryNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-lesi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-lesi" type="462c0819:PsiDirectoryNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="create" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-lesi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-lesi" type="462c0819:PsiDirectoryNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="delete" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -228,7 +208,8 @@
       <workItem from="1558001835230" duration="478000" />
       <workItem from="1558012535697" duration="12000" />
       <workItem from="1558012618641" duration="3056000" />
-      <workItem from="1558039122602" duration="3294000" />
+      <workItem from="1558039122602" duration="3861000" />
+      <workItem from="1558197759849" duration="3304000" />
     </task>
     <task id="LOCAL-00001" summary="Update Wiki">
       <created>1557770769483</created>
@@ -262,7 +243,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10191000" />
+    <option name="totallyTimeSpent" value="14062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -300,16 +281,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Reset Password partial view" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="184">
-            <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/portfolio/views/partials/resetpassword.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -361,51 +332,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/views/partials/navbar.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/views/login.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/views/edit-education.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="37" column="10" lean-forward="true" selection-end-line="40" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/views/partials/admin/delete/delete-education.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -413,17 +339,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/views/partials/navbar.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/views/login.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/views/edit-education.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="37" column="10" selection-end-line="40" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/views/partials/admin/delete/delete-education.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/slider-master/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2001">
+          <caret line="87" column="54" selection-start-line="87" selection-start-column="54" selection-end-line="87" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/portfolio/public/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="37" column="15" lean-forward="true" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+        <state relative-caret-position="69">
+          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="299">
+            <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/portfolio/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="54" column="14" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+        <state relative-caret-position="223">
+          <caret line="147" column="25" selection-start-line="147" selection-start-column="25" selection-end-line="147" selection-end-column="25" />
         </state>
       </provider>
     </entry>

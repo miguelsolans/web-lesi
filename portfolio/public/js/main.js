@@ -1,8 +1,8 @@
 requirejs([
     'jquery',
     'instafeed',
-    'facebook',
-    'setlistfm'
+    'facebook'
+    // 'setlistfm'
 ], function($, Instafeed,) {
 
     function getLink(txt) {
@@ -25,6 +25,8 @@ requirejs([
     FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
 
+            console.log("%c Logged in!",
+                'font-weight: bold; font-size: 50px; color: green; text-shadow: 1px 1px 0px black, 1px -1px 0px black, -1px 1px 0px black, -1px -1px 0px black');
             /**
              * Get Page profile Picture
              */
@@ -111,6 +113,8 @@ requirejs([
             // The user isn't logged in to Facebook. You can launch a
             // login dialog with a user gesture, but the user may have
             // to log in to Facebook before authorizing your application.
+            console.log("%c Couldn't Login!",
+                'font-weight: bold; font-size: 50px; color: red; text-shadow: 1px 1px 0px black, 1px -1px 0px black, -1px 1px 0px black, -1px -1px 0px black');
             console.log("Not logged in!");
         }
     });

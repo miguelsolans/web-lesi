@@ -1,9 +1,9 @@
 # 	Multimedia and Web technology
 Web Programming Projects
 
-| Project       | Description    |Run Command   | Dev Command | Port      |
-| ------------- | -------------- |------------- | ----------- | --------- |
-| Portfolio     | Final Project  | node server  | npm run dev | 3000      |
+| Project       | Description    |Run Command   | Dev Command | Port      | HTTPS    |
+| ------------- | -------------- |------------- | ----------- | --------- | -------- |
+| Portfolio     | Final Project  | node server  | npm run dev | 3000      | Supported
 
 # Installing Dependencies
 

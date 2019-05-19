@@ -1,8 +1,17 @@
+// Loading modules
+
+const https = require('https');
+const fs = require('fs');
+
 const express = require('express');
 const bodyParser= require('body-parser'); // to handle form posts
 const app = express();
 
+const MongoClient = require('mongodb').MongoClient;
 
+
+
+// Serving static files
 app.use(express.static(__dirname + '/public'));
 
 // ejs
@@ -11,15 +20,16 @@ app.set('view engine', 'ejs');
 // urlencoded tells body-parser to extract data from <from>
 app.use(bodyParser.urlencoded({extended: true}));
 
-
-app.listen(3000, function() {
-    console.log("Magic Port: 3000");
+// Establishing HTTPS and server to Port 3000
+https.createServer({
+    key: fs.readFileSync('ssl/server.key'),
+    cert: fs.readFileSync('ssl/server.cert')
+}, app).listen(3000, () => {
+    console.log('Listening...')
 });
 
-
-const MongoClient = require('mongodb').MongoClient;
+// Connection to MongoDB
 var db;
-
 MongoClient.connect('mongodb://localhost:27017', (err, client) => {
     // ... start the server
     // If there was an error establishing connection to mongodb
@@ -41,7 +51,11 @@ MongoClient.connect('mongodb://localhost:27017', (err, client) => {
 //     res.sendFile(__dirname + "/index.html");
 // });
 
-
+/** Main Route
+ * Get index page
+ * req: Client Request
+ * res: Server Response
+ */
 app.get('/', (req, res) => {
     db.collection('education').find().toArray((err, result) => {
         if (err) console.log(err);
@@ -57,6 +71,11 @@ app.get('/', (req, res) => {
     });
 });
 
+/** Route: Editing Education
+ * Get index page
+ * req: Client Request
+ * res: Server Response
+ */
 app.get('/edit-education', (req, res) => {
     console.log("Editing Education");
 
@@ -125,7 +144,11 @@ app.get('/test', function(req, res) {
     });
 });
 
-//The 404 Route (ALWAYS Keep this as the last route)
+/** Route: Anything else not defined
+ * Renders not found page
+ * req: Client Request
+ * res: Server Response
+ */
 app.get('*', function(req, res){
     res.render('404.ejs');
 });
