@@ -1,6 +1,9 @@
 # Ignore Node Modules Folder
 node_modules/
 
+# Ignore WebStorm
+.idea
+
 # misc
 .DS_Store
 ._.DS_Store
