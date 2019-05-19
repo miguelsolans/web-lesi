@@ -11,4 +11,5 @@ To install dependecies, run the following command
 
 `$ npm install` 
 
-Created  by *Miguel Solans*  - 13253
+# License
+Copyright (c) 2019, Miguel Solans
