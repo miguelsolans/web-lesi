@@ -1,13 +1,18 @@
 // Loading modules
+// HTTPS
+const https         = require('https');
+// File System
+const fs            = require('fs');
+// Express server
+const express       = require('express');
+const app           = express();
+// Body Parser
+const bodyParser    = require('body-parser'); // to handle form posts
+// MongoDB
+const MongoClient   = require('mongodb').MongoClient;
 
-const https = require('https');
-const fs = require('fs');
 
-const express = require('express');
-const bodyParser= require('body-parser'); // to handle form posts
-const app = express();
 
-const MongoClient = require('mongodb').MongoClient;
 
 
 
