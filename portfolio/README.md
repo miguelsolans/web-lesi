@@ -12,6 +12,11 @@ This project has been built and uses technologies and third party npm libraries 
 1. MongoDB
 1. Mongoose
 
+Besides npm and nodeJS, APIs such as:
+1. Instagram through Instafeed
+1. Facebook
+1. LastFM
+
 To install all dependecies, it is mandatory to run the following command inside portfolio folder containing *package.json*
 
 `$ npm install` 
