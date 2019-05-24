@@ -9,7 +9,7 @@ const educationSchema = mongoose.Schema({
 });
 
 // Mongoose Model
-const Education = mongoose.model('Education', educationSchema);
+const Education = mongoose.model('education', educationSchema, 'education');
 
 //export model
 module.exports = Education;

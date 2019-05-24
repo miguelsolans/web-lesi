@@ -5,16 +5,16 @@ const app           = express();
 // Body Parser
 const bodyParser    = require('body-parser'); // to handle form posts
 // MongoDB
-const MongoClient   = require('mongodb').MongoClient;
 const mongoose      = require('mongoose')
 
 // Configure Database
 let db = 'mongodb://localhost:27017/portfolio';
-const Education = require('../app/models/Education');
 
 mongoose.connect(db, {
-    useNewUrlParser: true,
-});
+    useNewUrlParser: true
+})
+    .then(() => console.log('Database listenning'))
+    .catch(err => console.log('Connection  error', err));
 
 const connection = mongoose.createConnection(db);
 
@@ -22,7 +22,6 @@ connection.on('open', function() {
     connection.db.listCollections().toArray(function( err, collectionNames ){
         if(err) console.log(err);
         else {
-            // console.log(collectionNames);
             connection.close();
         }
     })
@@ -53,6 +52,28 @@ app.use('/', PortfolioRoutes);
 app.use(function(req, res) {
     res.render('404');
 });
+
+
+// Codigo Prof
+app.use((error, req, res, next) => {
+    res.status(error.status || 500);
+    res.json({
+        error: {
+            message: error.message
+        }
+    })
+});
+
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
+
+    if (req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET')
+        return res.status(200).json({})
+    }
+});
+// -----------
 
 // Module Export
 module.exports = app;
