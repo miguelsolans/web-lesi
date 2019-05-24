@@ -1,7 +1,8 @@
 # 	Portfolio
 
 *Portfolio* is a project created with nodeJS technology, MongoDB and several external APIs, all built with JavaScript.
-This web-app *Portfolio* may work not only as a Currculumn Vitae but also as a free space for his owner to upload and display their own content, integrating severals social networks.
+This web-app *Portfolio* may work not only as a Currculumn Vitae but also as a free space for his owner to upload and 
+display their own content, integrating severals social networks.
 
 #   Dependencies
 

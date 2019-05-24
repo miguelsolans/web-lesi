@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miguel Solans</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="lib/require.js" data-main="js/app"></script>
+
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>&lt; Hello-World! &gt;</h1>
+        </div>
+        <!--<center><img class="img-fluid" src="img/solans.png" style="max-height: 200px;"></center>-->
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Right Panel -->
+            <div class="col-md-9">
+                <div class="container">
+                    <h2>Certificates</h2>
+                    <div id="certificates-img"></div>
+                    <h2>Projects I've taken role</h2>
+                    <div id="projects-img"></div>
+
+                    <h2>Personal Interests</h2>
+                    <h2>Music I've been listening</h2>
+                    <p>I consider music as an inspiration to any kind of work so I like to take inspiration out it, ranging from Classical to Soundtracks and even Rock and Metal to Pop from the 80s</p>
+                    <div id="music"></div>
+                </div>
+            </div>
+
+
+            <!-- Left Panel -->
+            <div class="col-md-3">
+                <div class="side-widget">
+					<div class="col d-flex align-items-center justify-content-center" id="profile-picture"></div>
+					<h3 class="text-center" id="name"></h3>
+					<p id="description"></p>
+				</div>
+                <div class="side-widget">
+                    <h3 class="text-center">Quick Info</h3>
+
+                    <p>Education: </p>
+                    <ol class="educations">
+                        <% for(var i in education) {%>
+                            <li class="education">
+                                <span><%= education[i].school %> - </span>
+                                <span><%= education[i].course %></span>
+                            </li>
+                        <% } %>
+                    </ol>
+
+                    <p>Currently Working On:</p>
+                    <ol class="current-jobs">
+                        <% for(var i in job) {%>
+                            <%if(job[i].flag === true) {%>
+                                <li class="job">
+                                    <span><%= job[i].company %> - </span>
+                                    <span><%= job[i].description %></span>
+                                </li>
+                            <% } %>
+                        <% } %>
+                    </ol>
+
+                    <p>Used to Work At:</p>
+                    <ol class="current-jobs">
+                        <% for(var i in job) {%>
+                            <%if(job[i].flag === false) {%>
+                                <li class="job">
+                                    <span><%= job[i].company %> - </span>
+                                    <span><%= job[i].description %></span>
+                                </li>
+                            <% } %>
+                        <% } %>
+                    </ol>
+                </div>
+
+                <div class="side-widget">
+                    <h3 class="text-center">Find Me On</h3>
+                    <center><p>LinkedIn</p></center>
+                    <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US"
+                         data-type="vertical" data-theme="light" data-vanity="miguelsolans">
+                        <a class="LI-simple-link" href='https://pt.linkedin.com/in/miguelsolans?trk=profile-badge'>Miguel Solans</a>
+                    </div>
+
+
+                </div>
+
+                <div class="side-widget">
+					<h3 class="text-center">Follow Me On</h3>
+                    <center><p>Soundcloud</p></center>
+					<!--<a class="twitter-timeline" data-height="350" href="https://twitter.com/MiguelRSolans?ref_src=twsrc%5Etfw">Tweets by MiguelRSolans</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/308014113&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <!--<h2>Pictures I've taken</h2>-->
+            <div id="instafeed"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

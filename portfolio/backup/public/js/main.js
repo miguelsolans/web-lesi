@@ -20,7 +20,7 @@ requirejs([
         version    : 'v3.3'
     });
     /**
-     *
+     * Token: EAAa8SNy7HegBANbZBKn5ehDihxvlIXRZAPdkOEt5JNYgd0Ngqi9HMbTBSyBdvp7faH1VsKfnaKPk95Gf24gS81cBjMRKbxSB7ke8ZARsDjDPkLhplin1SPlYlFbjgWiCzs6E9sfOdSGvbFFaFunsHREZBv7zs4eNvKIrAKIxZBwV4peRx7W7aEZCkODPRJhkRUMy2ACBa4ngZDZD
      */
     FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
