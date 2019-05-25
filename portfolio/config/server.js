@@ -5,10 +5,12 @@ const app           = express();
 // Body Parser
 const bodyParser    = require('body-parser'); // to handle form posts
 // MongoDB
-const mongoose      = require('mongoose')
+const mongoose      = require('mongoose');
 
 // Configure Database
-let db = 'mongodb://localhost:27017/portfolio';
+//let db = 'mongodb://localhost:27017/portfolio';                   // Local
+let db = "mongodb+srv://miguelsolans:IAmForgetful" +
+    "@cluster0-ind49.mongodb.net/portfolio?retryWrites=true";
 
 mongoose.connect(db, {
     useNewUrlParser: true
@@ -66,10 +68,10 @@ app.use((error, req, res, next) => {
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
 
     if (req.method === 'OPTIONS') {
-        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET')
+        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
         return res.status(200).json({})
     }
 });

@@ -2,9 +2,15 @@ requirejs([
     'jquery',
     'instafeed',
     'facebook'
-    // 'setlistfm'
 ], function($, Instafeed,) {
 
+    function getCaption(txt) {
+
+        return {
+            url: txt.match(/\bhttps?:\/\/\S+/gi),
+            caption: txt.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '')
+        };
+    }
     function getLink(txt) {
         var string = txt.match(/\bhttps?:\/\/\S+/gi);
 
@@ -32,7 +38,6 @@ requirejs([
              */
             FB.api('/325105178191793?fields=picture.height(900)', function(data) {
                 var imgTag = "<img class='portrait' src='" + data.picture.data.url + "'>";
-
                 document.getElementById('profile-picture').innerHTML += imgTag;
             });
 
@@ -48,17 +53,30 @@ requirejs([
             /**
              * Get Certificates album images
              */
-            // 331562370879407?fields=picture
-            // 331562370879407?fields=photos{name,images}
-            // As maiores imagens vêm sempre em images[0].source
             FB.api('331562370879407?fields=photos{name,images}', function(data) {
                 //console.dir(data);
                 var photos = data.photos.data;
                 for(var i in photos) {
-                    var img = "<div class='col-sm'><img class='fb-image' src=" + photos[i].images[0].source + "></div>";
+                    // var img = "<div class='col-sm'><img class='fb-image' src=" + photos[i].images[0].source + "></div>";
+
+                    var active = (i === "0") ? "active" : "";
+
+                    // var url = getLink(photos[i].name);
+                    // var caption = getCaption(photos[i].name);
+                    var info = getCaption(photos[i].name);
+
+                    console.log(info);
+
+                    var tagContent = "<div class='carousel-item " + active + "'>" +
+                                        "<img src='" + photos[i].images[0].source + "'>" +
+                                        "<div class='slide-caption'>" +
+                                            "<p>" + info.caption + "</p>" +
+                                            "<a href='" + info.url[0] + "'>Link</a>" +
+                                        "</div>" +
+                                     "</div>";
 
 
-                    document.getElementById('certificates-img').innerHTML += img;
+                    document.getElementById('certificates-img').innerHTML += tagContent;
 
                     // var url;
                     // var string = getLink(photos[i].name);
@@ -156,48 +174,5 @@ requirejs([
         resolution: 'standard_resolution'
     });
     userFeed.run();
-
-
-
-
-
-    // Setlist fm config
-    // $.ajax({
-    //     url: "https://api.setlist.fm/rest/1.0/user/miguelsolans/attended?p=1",
-    //     method: "GET",
-    //     headers: {
-    //         "Authorization": "4b54b070-8e29-416c-bf35-ff6b8f6e7eeb",
-    //         'Content-Type': 'application/json'
-    //     },
-    // }).then(function(response) {
-    //     console.log(response);
-    // }).catch(function(err) {
-    //     console.error(err);
-    // });
-    // $.ajax({
-    //     method: "GET",
-    //     url: "https://api.setlist.fm/rest/1.0/user/miguelsolans/attended?p=1",
-    //     headers: {
-    //         "x-api-key": "4b54b070-8e29-416c-bf35-ff6b8f6e7eeb",
-    //         "Accept": 'application/json'
-    //     },
-    //     success: function(data) {
-    //         console.log(data);
-    //     },
-    //     dataType: "json"
-    // });
-
-
-    /*
-    method: 'GET',
-        withCredentials: true,
-        credentials: 'include',
-        headers: {
-            'Authorization': bearer,
-            'X-FP-API-KEY': 'iphone', //it can be iPhone or your any other attribute
-            'Content-Type': 'application/json'
-        }
-        //Accept: application/json
-     */
 
 });

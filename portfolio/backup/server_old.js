@@ -46,15 +46,6 @@ MongoClient.connect('mongodb://localhost:27017', (err, client) => {
 
 });
 
-// req : request
-// res : response
-// app.get('/', function(req, res) {
-//     res.send("Hello World!");
-// });
-
-// app.get('/', function(req, res) {
-//     res.sendFile(__dirname + "/index.html");
-// });
 
 /** Main Route
  * Get index page

@@ -1,8 +1,0 @@
-requirejs([
-    'jquery',
-    'facebook',
-], function($) {
-
-
-
-});

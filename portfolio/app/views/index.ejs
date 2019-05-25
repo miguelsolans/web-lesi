@@ -6,10 +6,22 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <!-- Bootstrap -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
     <script src="lib/require.js" data-main="js/app"></script>
 
     <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+    <style>
+        .carousel-inner img {
+            width: 100%;
+            heigh: 100%;
+        }
+    </style>
 
 </head>
 <body>
@@ -27,7 +39,10 @@
             <div class="col-md-9">
                 <div class="container">
                     <h2>Certificates</h2>
-                    <div id="certificates-img"></div>
+                    <div id="carousel-example-2" class="carousel slide" data-ride="carousel">
+                        <div id="certificates-img" class="carousel-inner"><!--Images Go Here --></div>
+                    </div>
+                    <!--<div id="certificates-img"></div>-->
                     <h2>Projects I've taken role</h2>
                     <div id="projects-img"></div>
 
