@@ -39,12 +39,18 @@
             <div class="col-md-9">
                 <div class="container">
                     <h2>Certificates</h2>
-                    <div id="carousel-example-2" class="carousel slide" data-ride="carousel">
+                    <div id="carousel-certificates" class="carousel slide" data-ride="carousel">
                         <div id="certificates-img" class="carousel-inner"><!--Images Go Here --></div>
+                        <!-- Carousel nav -->
+                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
                     </div>
                     <!--<div id="certificates-img"></div>-->
                     <h2>Projects I've taken role</h2>
-                    <div id="projects-img"></div>
+                    <!--<div id="projects-img"></div>-->
+                    <div id="carousel-projects" class="carousel slide" data-ride="carousel">
+                        <div id="projects-img" class="carousel-inner"><!--Images Go Here --></div>
+                    </div>
 
                     <h2>Personal Interests</h2>
                     <h2>Music I've been listening</h2>
@@ -126,5 +132,20 @@
 
     </div>
 
+
+    <script>
+        // Fixes the prev/next links of the sliders
+        $('.carousel-control.left').click(function(e) {
+            e.stopPropagation();
+            $('#carousel-certificates').carousel('prev');
+            return false;
+        });
+
+        $('.carousel-control.right').click(function(e) {
+            e.stopPropagation();
+            $("#carousel-certificates").carousel('next');
+            return false;
+        });
+    </script>
 </body>
 </html>

@@ -5,9 +5,9 @@ requirejs([
 ], function($, Instafeed,) {
 
     function getCaption(txt) {
-
+        var urlStr = txt.match(/(?:https?|ftp):\/\/[\n\S]+/g);
         return {
-            url: txt.match(/\bhttps?:\/\/\S+/gi),
+            url: (urlStr ? urlStr[0] : "#"), // txt.match(/\bhttps?:\/\/\S+/gi),
             caption: txt.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '')
         };
     }
@@ -57,61 +57,65 @@ requirejs([
                 //console.dir(data);
                 var photos = data.photos.data;
                 for(var i in photos) {
-                    // var img = "<div class='col-sm'><img class='fb-image' src=" + photos[i].images[0].source + "></div>";
 
                     var active = (i === "0") ? "active" : "";
 
-                    // var url = getLink(photos[i].name);
-                    // var caption = getCaption(photos[i].name);
                     var info = getCaption(photos[i].name);
-
-                    console.log(info);
 
                     var tagContent = "<div class='carousel-item " + active + "'>" +
                                         "<img src='" + photos[i].images[0].source + "'>" +
                                         "<div class='slide-caption'>" +
                                             "<p>" + info.caption + "</p>" +
-                                            "<a href='" + info.url[0] + "'>Link</a>" +
+                                            "<a class='btn btn-primary' href='" + info.url + "'>Link</a>" +
                                         "</div>" +
                                      "</div>";
-
-
                     document.getElementById('certificates-img').innerHTML += tagContent;
-
-                    // var url;
-                    // var string = getLink(photos[i].name);
-                    //
-                    // if(string) {
-                    //     url = "<br><a href='" + string[0] + "'>Link</a>";
-                    //     document.getElementById('certificates-img').innerHTML += url;
-                    // }
                 }
+            });
 
+            FB.api('332124090823235?fields=photos{name,images}', function(data) {
+                //console.dir(data);
+                var photos = data.photos.data;
+                for(var i in photos) {
+
+                    var active = (i === "0") ? "active" : "";
+
+                    var info = getCaption(photos[i].name);
+
+                    var tagContent = "<div class='carousel-item " + active + "'>" +
+                                        "<img src='" + photos[i].images[0].source + "'>" +
+                                            "<div class='slide-caption'>" +
+                                                "<p>" + info.caption + "</p>" +
+                                                "<a class='btn btn-primary' href='" + info.url + "'>Link</a>" +
+                                            "</div>" +
+                                     "</div>";
+                    document.getElementById('projects-img').innerHTML += tagContent;
+                }
             });
 
             /**
              * Get Projects album pictures
              */
-            FB.api('332124090823235?fields=photos{picture,name}', function(data) {
-
-                var photos = data.photos.data;
-
-                for(var i in photos) {
-                    var img = "<img src='" + photos[i].picture + "'>";
-
-                    document.getElementById('projects-img').innerHTML += img;
-
-                    var url;
-                    var string = getLink(photos[i].name);
-
-                    if(string) {
-                        url = "<br><a href='" + string[0] + "'>Link</a>";
-                        document.getElementById('projects-img').innerHTML += url;
-                    }
-
-                }
-
-            });
+            // FB.api('332124090823235?fields=photos{picture,name}', function(data) {
+            //
+            //     var photos = data.photos.data;
+            //
+            //     for(var i in photos) {
+            //         var img = "<img src='" + photos[i].picture + "'>";
+            //
+            //         document.getElementById('projects-img').innerHTML += img;
+            //
+            //         var url;
+            //         var string = getLink(photos[i].name);
+            //
+            //         if(string) {
+            //             url = "<br><a href='" + string[0] + "'>Link</a>";
+            //             document.getElementById('projects-img').innerHTML += url;
+            //         }
+            //
+            //     }
+            //
+            // });
 
 
             /**
