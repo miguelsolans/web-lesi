@@ -7,8 +7,8 @@
     <!-- Bootstrap -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
@@ -18,18 +18,15 @@
     <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
     <style>
-        .carousel-inner img {
-            width: 100%;
-            heigh: 100%;
-        }
+
     </style>
 
 </head>
 <body>
 
-<div class="container">
+<div class="container-fluid">
     <div id="carousel-header" class="carousel slide" data-ride="carousel">
-        <div id="header-img" class="carousel-inner"></div>
+        <div id="header-img" class="carousel-inner header"></div>
     </div>
 </div>
     <!--<div class="container">-->
@@ -49,8 +46,10 @@
                     <div id="carousel-certificates" class="carousel slide" data-ride="carousel">
                         <div id="certificates-img" class="carousel-inner"><!--Images Go Here --></div>
                         <!-- Carousel nav -->
-                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev" onclick="$('#carousel-certificates').carousel('prev')">‹</a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next" onclick="$('#carousel-certificates').carousel('next')">›</a>
+                        <!--<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>-->
+                        <!--<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>-->
                     </div>
                     <!--<div id="certificates-img"></div>-->
                     <h2>Projects I've taken role</h2>

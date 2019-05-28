@@ -93,8 +93,7 @@ define([
         }
     });
 
-
-    // Instagram feed
+        // Instagram feed
     var userFeed = new Instafeed({
         get: 'user',
         // miguelsolans: 356670749
@@ -105,9 +104,9 @@ define([
         //              Token: 13531427925.1677ed0.8079190ddfb4467789a1586f50c89e17
         userId: '13531427925',
         accessToken: '13531427925.1677ed0.8079190ddfb4467789a1586f50c89e17',
-        	//filter: function(image) {
-        	//	return image.tags.indexOf('metal') >= 0;
-        	//},
+        //filter: function(image) {
+        //	return image.tags.indexOf('metal') >= 0;
+        //},
         limit: 10,
         template: '<a href="{{link}}" target="_blank"><img class="col-md-10" src="{{image}}" /></a>',
         // template: '<a href="{{link}}" target="_blank"><img class="insta-pic" src="{{image}}" /></a>',
@@ -118,18 +117,21 @@ define([
 
     $(document).ready(function() {
 
-        var tags = ['landrover-offroad', 'programming', 'music'];
+        var tags = ['landrover-offroad', 'programming', 'music-rock'];
         var unsplashQuery = "https://api.unsplash.com/search/photos?page=1&orientation=landscape&query=";
+        var cnt = 0;
 
-        for(var i in tags) {
+        for(var i = 0; i < tags.length; i++) {
             var apiKey = "&client_id=e3e934996a072887e6f72b2b9eff19e8e7f49eb1126684514b9b8bbcf91c29e7";
             var apiStr = unsplashQuery + tags[i] + apiKey;
+
+
             $.getJSON(apiStr, function(data) {
+                var active = (cnt === 0) ? "active" : "";
+                cnt++;
                 // document.getElementById('header-img').innerHTML += utils.getImgTag(data.results[0].urls.regular);
-                var active = (i === "0") ? "active" : "";
                 var tagContent = utils.getCarouselHeader(data.results[0].urls.regular, active);
                     //utils.getCarouselItem(data.results[0].urls.regular, undefined, undefined, active);
-
                 document.getElementById('header-img').innerHTML += tagContent
 
             });
