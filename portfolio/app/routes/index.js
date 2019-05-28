@@ -1,13 +1,36 @@
 const express   = require('express');
 const router    = express.Router();
 const async     = require('async');
-const mongoose = require('mongoose');
+const mongoose  = require('mongoose');
 
 
 // Get Data Model Modules
 const Education = require('../models/Education');
 const Job       = require('../models/Jobs');
 const Users     = require('../models/Users');
+const Tags      = require('../models/Tags');
+
+router.get('/test', function(req, res) {
+    Tags.find()
+        .select()
+        .exec()
+        .then(docs => {
+            //console.log(docs);
+            // docs[i].tag[ii];
+            for(var i in docs) {
+                console.log("{ ");
+                for (var ii in docs[i].tag) {
+                    console.log(docs[i].tag[ii]);
+                }
+                console.log(" } ");
+
+            }
+                console.log(docs[i].tag[0]);
+
+            // for(var ii in docs[i].tag)
+            // console.log(docs[0].tag[0]);
+        })
+});
 
 // Home
 router.get('/', function(req, res) {
