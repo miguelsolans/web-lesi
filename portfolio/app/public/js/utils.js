@@ -31,6 +31,11 @@ define([
         return "<img src='" + url + "'>";
     }
 
+    function getCarouselHeader(imgUrl, active) {
+    //<div class="carousel-item active" style="background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080')">
+        //return "<div class='carousel-item " + active + "' style=background-image: url(" + imgUrl + ")></div>";
+        return "<div class='carousel-item " + active + "' style='background-image: url(" + imgUrl + ")'></div>";
+    }
     function getCarouselItem(imgUrl, caption, url, active) {
         if(caption !== undefined && url !== undefined) {
             return "<div class='carousel-item " + active + "'>" +
@@ -51,6 +56,7 @@ define([
         getCaption: getCaption,
         getLink: getLink,
         getImgTag: getImgTag,
+        getCarouselHeader: getCarouselHeader,
         getCarouselItem: getCarouselItem
     }
 });

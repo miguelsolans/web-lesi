@@ -127,7 +127,8 @@ define([
             $.getJSON(apiStr, function(data) {
                 // document.getElementById('header-img').innerHTML += utils.getImgTag(data.results[0].urls.regular);
                 var active = (i === "0") ? "active" : "";
-                var tagContent = utils.getCarouselItem(data.results[0].urls.regular, undefined, undefined, active);
+                var tagContent = utils.getCarouselHeader(data.results[0].urls.regular, active);
+                    //utils.getCarouselItem(data.results[0].urls.regular, undefined, undefined, active);
 
                 document.getElementById('header-img').innerHTML += tagContent
 
