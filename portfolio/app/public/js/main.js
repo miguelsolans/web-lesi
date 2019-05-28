@@ -13,6 +13,6 @@ require.config({
 });
 
 //Main module
-require(["main-bak", "utils"], function () {
+require(["renderer", "utils"], function () {
     console.log("Main: loaded");
 });
