@@ -2,6 +2,7 @@ define([
     'jquery',
     'instafeed',
     'utils',
+    //'fetchApi',
     'facebook',
 ], function($, Instafeed, utils) {
 
@@ -96,20 +97,10 @@ define([
         // Instagram feed
     var userFeed = new Instafeed({
         get: 'user',
-        // miguelsolans: 356670749
-        //              Token: 356670749.1677ed0.7401560dd16d424a9744967925c234db
-        // metalstigma: 7516438355
-        //              Token: 7516438355.1677ed0.6dc1f61c766f44ad8a85fac1abff991d
-        // worldby_lenses: 13531427925
-        //              Token: 13531427925.1677ed0.8079190ddfb4467789a1586f50c89e17
         userId: '13531427925',
         accessToken: '13531427925.1677ed0.8079190ddfb4467789a1586f50c89e17',
-        //filter: function(image) {
-        //	return image.tags.indexOf('metal') >= 0;
-        //},
         limit: 10,
         template: '<a href="{{link}}" target="_blank"><img class="col-md-10" src="{{image}}" /></a>',
-        // template: '<a href="{{link}}" target="_blank"><img class="insta-pic" src="{{image}}" /></a>',
         resolution: 'standard_resolution'
     });
     userFeed.run();

@@ -2,13 +2,15 @@
 require.config({
     //Define 3rd party plugins dependencies
     "*": {
-        "utils":{}
+        "utils":{},
+        "fetch-data": {}
     },
     paths: {
         jquery: 'lib/jquery',
         instafeed: 'lib/instafeed',
         facebook: 'lib/facebook',
-        utils: 'utils'
+        utils: 'utils',
+        fetchApi: 'fetch-data'
     },
 });
 

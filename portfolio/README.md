@@ -22,5 +22,19 @@ To install all dependecies, it is mandatory to run the following command inside 
 
 `$ npm install` 
 
+# Running
+This nodeJS app can be ran through the following commands, depending on its purpose:
+* Start App: `$ node app` 
+* Dev Mode: `$ npm run dev`
+
+By running in Dev Mode, the server will refresh itself every time changes in code are saved
+
+# Accessing Dashboard
+For CRUD operations, Dashboard can be accessed by entering navigating to https://localhost:3000 with the following credentials
+* Username: miguelsolans
+* Password
+
+Demo credentials and user permissions will be created, eventually
+
 # License
 Copyright (c) 2019, Miguel Solans

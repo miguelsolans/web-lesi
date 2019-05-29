@@ -53,10 +53,47 @@ define([
 
 
     return {
-        getCaption: getCaption,
-        getLink: getLink,
-        getImgTag: getImgTag,
-        getCarouselHeader: getCarouselHeader,
-        getCarouselItem: getCarouselItem
+        getCaption: function(txt) {
+            var urlStr = txt.match(/(?:https?|ftp):\/\/[\n\S]+/g);
+            return {
+                url: (urlStr ? urlStr[0] : "#"), // txt.match(/\bhttps?:\/\/\S+/gi),
+                caption: txt.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '')
+            };
+        },
+
+        getLink: function(txt) {
+            var string = txt.match(/\bhttps?:\/\/\S+/gi);
+
+            return string ? string : undefined;
+        },
+
+        getImgTag: function(url) {
+            return "<img src='" + url + "'>";
+        },
+        getCarouselHeader: function(imgUrl, active) {
+            //<div class="carousel-item active" style="background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080')">
+            //return "<div class='carousel-item " + active + "' style=background-image: url(" + imgUrl + ")></div>";
+            return "<div class='carousel-item " + active + "' style='background-image: url(" + imgUrl + ")'></div>";
+        },
+
+        getCarouselItem: function(imgUrl, caption, url, active) {
+            if(caption !== undefined && url !== undefined) {
+                return "<div class='carousel-item " + active + "'>" +
+                            "<img src='" + imgUrl + "'>" +
+                            "<div class='slide-caption'>" +
+                                "<p>" + caption + "</p>" +
+                                "<a class='btn btn-primary' href='" + url + "'>Link</a>" +
+                            "</div>" +
+                        "</div>";
+            } else {
+                return "<div class='carousel-item " + active + "'><img src='" + imgUrl + "'></div>";
+            }
+        }
     }
 });
+
+// getCaption: getCaption,
+// getLink: getLink,
+// getImgTag: getImgTag,
+// getCarouselHeader: getCarouselHeader,
+// getCarouselItem: getCarouselItem
