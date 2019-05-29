@@ -9,7 +9,9 @@ Web Programming Projects
 
 To install dependecies, run the following command
 
-` $ npm install                                 ` 
+```
+$ npm install
+```
 
 # License
 Copyright (c) 2019, Miguel Solans

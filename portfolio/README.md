@@ -24,8 +24,14 @@ To install all dependecies, it is mandatory to run the following command inside 
 
 # Running
 This nodeJS app can be ran through the following commands, depending on its purpose:
-* Start App: `$ node app` 
-* Dev Mode: `$ npm run dev`
+* Start App:  
+```   
+$ node app
+```   
+* Dev Mode:  
+```
+$ npm run dev
+```
 
 By running in Dev Mode, the server will refresh itself every time changes in code are saved
 

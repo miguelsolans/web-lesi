@@ -75,6 +75,8 @@ router.post('/admin', (req, res) => {
  * Administration Panel
  * CRUD Operations
  */
+
+// New Education
 router.post('/newEducation', (req, res) => {
     const education = new Education({
         _id: new mongoose.Types.ObjectId(),
@@ -88,6 +90,17 @@ router.post('/newEducation', (req, res) => {
             res.render('admin');
         })
         .catch(err => console.log(err))
+});
+
+// Edit Education
+router.get('/edit-education', (req, res) => {
+    Education.find()
+        .select()
+        .exec()
+        .then(docs => {
+            res.render('edit-education', { education: docs})
+        });
+    // res.render('edit-education');
 });
 
 
