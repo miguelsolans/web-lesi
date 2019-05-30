@@ -10,28 +10,6 @@ const Job       = require('../models/Jobs');
 const Users     = require('../models/Users');
 const Tags      = require('../models/Tags');
 
-router.get('/test', function(req, res) {
-    Tags.find()
-        .select()
-        .exec()
-        .then(docs => {
-            //console.log(docs);
-            // docs[i].tag[ii];
-            for(var i in docs) {
-                console.log("{ ");
-                for (var ii in docs[i].tag) {
-                    console.log(docs[i].tag[ii]);
-                }
-                console.log(" } ");
-
-            }
-                console.log(docs[i].tag[0]);
-
-            // for(var ii in docs[i].tag)
-            // console.log(docs[0].tag[0]);
-        })
-});
-
 // Home
 router.get('/', function(req, res) {
     var educationList = Education.find({});
@@ -77,7 +55,10 @@ router.post('/admin', (req, res) => {
  */
 
 // New Education
-router.post('/newEducation', (req, res) => {
+router.get('/newdata', (req, res) => {
+    res.render('newdata');
+});
+router.post('/new-education', (req, res) => {
     const education = new Education({
         _id: new mongoose.Types.ObjectId(),
         school: req.body.school,
@@ -91,6 +72,21 @@ router.post('/newEducation', (req, res) => {
         })
         .catch(err => console.log(err))
 });
+router.post('/new-job', (req, res) => {
+    const job = new Job({
+        _id: new mongoose.Types.ObjectId(),
+        company: req.body.company,
+        link: req.body.link,
+        description: req.body.description,
+        flag: req.body.flag === 'true'
+    });
+
+    job.save()
+        .then(result => {
+            res.render('admin');
+        })
+        .catch(err => console.log(err))
+});
 
 // Edit Education
 router.get('/edit-education', (req, res) => {
@@ -98,7 +94,7 @@ router.get('/edit-education', (req, res) => {
         .select()
         .exec()
         .then(docs => {
-            res.render('edit-education', { education: docs});
+            res.render('edit', { education: docs});
         });
     // res.render('edit-education');
 });
@@ -110,7 +106,7 @@ router.get('/edit-education/:id', (req, res) => {
         .select()
         .exec()
         .then(docs => {
-            res.render('editing-education', {education: docs});
+            res.render('editdata', {education: docs});
         });
 });
 
@@ -130,19 +126,56 @@ router.post('/update-education', (req, res) => {
             res.render('login')
         })
         .catch(err => console.log(err))
-    
-    
+});
 
+router.get('/delete-education/:id', (req, res) => {
+    const educationId = req.params.id;
+    console.log(req.params);
+    // console.log(educationId);
+
+    Education.deleteOne({ _id: educationId })
+        .exec()
+        .then(result => {
+            Education.find().exec()
+                .then(result => res.render('edit', { education: result, job: null }))
+                .catch(err => console.log(err));
+        })
+        .catch(err => console.log(err));
 });
 
 
-router.get('delete-education', (req, res) => {
-    Education.find()
+router.get('/edit-job', (req, res) => {
+    Job.find()
         .select()
         .exec()
         .then(docs => {
-            res.render('delete-education', { education: docs});
+            console.log(docs);
+            res.render('edit', { education: null, job: docs});
+        })
+});
+
+router.get('/edit-job/:id', (req, res) => {
+
+    Job.findOne({ _id: req.params.id })
+        .select()
+        .exec()
+        .then(docs => {
+            res.render('editdata', {education: null, job: docs});
         });
+});
+
+router.get('/delete-job/:id', (req, res) => {
+    const jobId = req.params.id;
+    console.log(req.params);
+
+    Job.deleteOne({ _id: jobId })
+        .exec()
+        .then(result => {
+            Job.find().exec()
+                .then(result => res.render('edit', { education: null, job: result }))
+                .catch(err => console.log(err));
+        })
+        .catch(err => console.log(err));
 });
 
 
