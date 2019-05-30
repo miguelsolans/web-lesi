@@ -1,0 +1,51 @@
+<%- include('partials/header') %>
+
+<div class="container">
+<% if(education !== null) { %>
+    <!-- Editing Education Form -->
+    <h2 align="center">Editing Education</h2>
+    <form action="/update-education" method="POST">
+        <label>School</label>
+        <br>
+        <input type="text" placeholder="school" name="school" value="<%= education.school %>">
+        <br>
+        <label>Course</label>
+        <br>
+        <input type="text" placeholder="course" name="course" value="<%= education.course %>">
+        <br>
+        <label>Link</label>
+        <br>
+        <input type="text" placeholder="website" name="link" value="<%= education.link %>">
+        <br>
+        <button type="submit">Add</button>
+        <input name="educationId" type="text" hidden value="<%= education._id %>" >
+    </form>
+
+<% } else if (job !== null) { %>
+    <h1 align="center">Editing Job</h1>
+    <!-- Editing Job Form -->
+    <form action="/update-education" method="POST">
+        <label>Company</label>
+        <br>
+        <input type="text" placeholder="school" name="school" value="<%= job.company %>">
+        <br>
+        <label>Description</label>
+        <br>
+        <input type="text" placeholder="course" name="course" value="<%= job.description %>">
+        <br>
+        <label>Link</label>
+        <br>
+        <input type="text" placeholder="website" name="link" value="<%= job.link %>">
+        <br>
+        <select name="flag">
+            <option value="true">True</option>
+            <option value="false">False</option>
+        </select>
+        <button type="submit">Add</button>
+        <input name="educationId" type="text" hidden value="<%= job._id %>" >
+    </form>
+
+<% } %>
+</div>
+
+<%- include('partials/footer') %>

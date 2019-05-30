@@ -1,0 +1,78 @@
+<%- include('partials/header') %>
+
+<div class="container">
+<% if(education !== null) { %>
+
+    <!-- List Education -->
+    <h1 align="center">Edit Education</h1>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">School Name</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var i in education) {%>
+                <tr class="education">
+                    <td><%= education[i].school %></td>
+                    <td><%= education[i].course %></td>
+                    <td>
+                        <a href="/edit-education/<%= education[i]._id %>">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/delete-education/<%= education[i]._id %>">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </a>
+                    </td>
+                </tr>
+            <% } %>
+            </tbody>
+    </table>
+
+
+
+<% } else if (job !== null) { %>
+
+    <!-- List Jobs -->
+    <h1 align="center">Edit Job</h1>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Company</th>
+                <th scope="col">Description</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var i in job) {%>
+                <tr class="education">
+                    <td><%= job[i].company %></td>
+                    <td><%= job[i].description %></td>
+                    <td>
+                        <a href="/edit-job/<%= job[i]._id %>">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/delete-job/<%= job[i]._id %>">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </a>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+
+<% } %>
+</div>
+
+<%- include('partials/footer') %>
