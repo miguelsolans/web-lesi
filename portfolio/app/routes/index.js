@@ -98,11 +98,52 @@ router.get('/edit-education', (req, res) => {
         .select()
         .exec()
         .then(docs => {
-            res.render('edit-education', { education: docs})
+            res.render('edit-education', { education: docs});
         });
     // res.render('edit-education');
 });
 
+router.get('/edit-education/:id', (req, res) => {
+    console.log(req.params.id);
+
+    Education.findOne({ _id: req.params.id })
+        .select()
+        .exec()
+        .then(docs => {
+            res.render('editing-education', {education: docs});
+        });
+});
+
+router.post('/update-education', (req, res) => {
+    const educationId = req.body.educationId;
+
+    var updateOps = {};
+    for(const [key, value] of Object.entries(req.body)){
+        updateOps[key] = value;
+    }
+
+    Education.update(
+        {_id:educationId},
+        {$set:updateOps})
+        .exec()
+        .then(result => {
+            res.render('login')
+        })
+        .catch(err => console.log(err))
+    
+    
+
+});
+
+
+router.get('delete-education', (req, res) => {
+    Education.find()
+        .select()
+        .exec()
+        .then(docs => {
+            res.render('delete-education', { education: docs});
+        });
+});
 
 
 // Module Export: router

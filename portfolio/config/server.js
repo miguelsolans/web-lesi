@@ -8,9 +8,9 @@ const bodyParser    = require('body-parser'); // to handle form posts
 const mongoose      = require('mongoose');
 
 // Configure Database
-//let db = 'mongodb://localhost:27017/portfolio';                   // Local
-let db = "mongodb+srv://miguelsolans:IAmForgetful" +
-    "@cluster0-ind49.mongodb.net/portfolio?retryWrites=true";
+let db = 'mongodb://localhost:27017/portfolio';                   // Local
+// let db = "mongodb+srv://miguelsolans:IAmForgetful" +
+//     "@cluster0-ind49.mongodb.net/portfolio?retryWrites=true";
 
 mongoose.connect(db, {
     useNewUrlParser: true

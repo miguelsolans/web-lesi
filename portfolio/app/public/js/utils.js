@@ -67,8 +67,12 @@ define([
             return string ? string : undefined;
         },
 
-        getImgTag: function(url) {
-            return "<img src='" + url + "'>";
+        getImgTag: function(url, cls) {
+            if(cls === undefined || cls === "")
+                return "<img src='" + url + "'>";
+            else
+                return "<img class='" + cls + "' src='" + url + "'>";
+            // return cls ? (undefined || "") ? "<img src='" + url + "'>" : "<img class='" + cls + "' src='" + url + "'>";
         },
         getCarouselHeader: function(imgUrl, active) {
             //<div class="carousel-item active" style="background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080')">

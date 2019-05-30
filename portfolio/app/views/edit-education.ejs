@@ -22,7 +22,8 @@
             <tr>
                 <th scope="col">School Name</th>
                 <th scope="col">Course Name</th>
-                <th scope="col"> </th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
             </tr>
             </thead>
             <tbody>
@@ -30,12 +31,25 @@
                 <tr class="education">
                     <td><%= education[i].school %></td>
                     <td><%= education[i].course %></td>
-                    <td><a href=edit/"<%= education[i]._id %>">Edit</a></td>
+                    <td>
+                        <a href="edit-education/<%= education[i]._id %>">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="delete-education/<%= education[i]._id %>">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </a>
+                    </td>
                 </tr>
             <% } %>
             </tbody>
         </table>
     </div>
+
+<!-- <a href="#">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </a> -->
 
 </body>
 </html>

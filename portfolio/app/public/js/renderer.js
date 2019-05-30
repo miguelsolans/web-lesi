@@ -26,7 +26,9 @@ define([
              * Get Page profile Picture
              */
             FB.api('/325105178191793?fields=picture.height(900)', function(data) {
-                var imgTag = "<img class='portrait' src='" + data.picture.data.url + "'>";
+                // var imgTag = utils.getImgTag(data.picture.data.url);
+                var imgTag = utils.getImgTag(data.picture.data.url, 'portrait');
+                // var imgTag = "<img class='portrait' src='" + data.picture.data.url + "'>";
                 document.getElementById('profile-picture').innerHTML += imgTag;
             });
 
