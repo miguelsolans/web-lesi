@@ -20,7 +20,9 @@ Besides npm and nodeJS, APIs such as:
 
 To install all dependecies, it is mandatory to run the following command inside portfolio folder containing *package.json*
 
-`$ npm install` 
+```
+$ npm install 
+```
 
 # Running
 This nodeJS app can be ran through the following commands, depending on its purpose:
