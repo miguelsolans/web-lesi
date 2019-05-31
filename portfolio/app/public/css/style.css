@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei');
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
-/*@import url('../fonts/source-code/SourceCodePro-Regular.ttf'); 														/* font-family: 'Source Code Pro', monospace; */
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+/**
+	STYLESHEET
+	Home Page
+ */
 
-@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+@import url("fonts.css");
 
 body {
 	margin: 0 auto;

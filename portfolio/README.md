@@ -16,7 +16,7 @@ This project has been built and uses technologies and third party npm libraries 
 Besides npm and nodeJS, APIs such as:
 1. Instagram through Instafeed
 1. Facebook
-1. LastFM
+1. ~~LastFM~
 
 To install all dependecies, it is mandatory to run the following command inside portfolio folder containing *package.json*
 
@@ -25,7 +25,7 @@ $ npm install
 ```
 
 #   Considerations Before Running
-1. This project has a self signed SSL certificate until 18th of June 2019, therefore to access this webapp
+1. This project has a self signed SSL certificate until 18th of June 2019 therefore, to access this webapp,
 it is mandatory to type the following address (https://localhost:3000) after running the server.
 
 1. MongoDB has been published on Cloud. It might be required using VPN or you can simply switch to local server

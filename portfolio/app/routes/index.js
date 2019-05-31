@@ -8,16 +8,18 @@ const mongoose  = require('mongoose');
 const Education = require('../models/Education');
 const Job       = require('../models/Jobs');
 const Users     = require('../models/Users');
-const Tags      = require('../models/Tags');
+const Keywords  = require('../models/Keywords');
 
 // Home
 router.get('/', function(req, res) {
     var educationList = Education.find({});
     var jobsList      = Job.find({});
+    var tagsList      = Keywords.find({});
 
     var resources = {
-        education: educationList.exec.bind(educationList),
-        job: jobsList.exec.bind(jobsList)
+        education:  educationList.exec.bind(educationList),
+        job:        jobsList.exec.bind(jobsList),
+        tags:       tagsList.exec.bind(tagsList)
     };
 
     async.parallel(resources, function(error, result) {
@@ -25,9 +27,25 @@ router.get('/', function(req, res) {
             res.status(500).send(error);
             return;
         }
+
+        var tagsNames = "";
+
+        for(var i in result.tags) {
+            var tag = result.tags[i].tag;
+            var tagArr = tag.split(';');
+
+            for(var ii in tagArr) {
+                tagArr[ii] = tagArr[ii].replace(/\s/g, '+');
+            }
+            tagsNames += result.tags[i].tag;
+        }
+
+        console.log(tagsNames);
+
         res.render('index', {
             education: result.education,
-            job: result.job
+            job: result.job,
+            tags: result.tags
         });
     })
 });
@@ -177,6 +195,13 @@ router.get('/delete-job/:id', (req, res) => {
         })
         .catch(err => console.log(err));
 });
+
+
+// Settings Page
+router.get('/settings', (req, res) => {
+    res.render('settings');
+});
+
 
 
 // Module Export: router
