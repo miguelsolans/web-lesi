@@ -11,7 +11,7 @@ This project has been built and uses technologies and third party npm libraries 
 1. Express
 1. FS (built-in nodeJS)
 1. MongoDB
-1. Mongoose
+1. Mongoose  
 
 Besides npm and nodeJS, APIs such as:
 1. Instagram through Instafeed
@@ -24,7 +24,16 @@ To install all dependecies, it is mandatory to run the following command inside 
 $ npm install 
 ```
 
-# Running
+#   Considerations Before Running
+1. This project has a self signed SSL certificate until 18th of June 2019, therefore to access this webapp
+it is mandatory to type the following address (https://localhost:3000) after running the server.
+
+1. MongoDB has been published on Cloud. It might be required using VPN or you can simply switch to local server
+by commenting line 11 and uncommenting line 12 of server.js file
+
+
+
+#   Running
 This nodeJS app can be ran through the following commands, depending on its purpose:
 * Start App:  
 ```   
@@ -35,14 +44,17 @@ $ node app
 $ npm run dev
 ```
 
-By running in Dev Mode, the server will refresh itself every time changes in code are saved
+By running in Dev Mode, the server will refresh itself every time changes in code are saved  
 
-# Accessing Dashboard
+Since this project has a self signed SSL certificate, to access this website, 
+it is MANDATORY type the following address https://localhost:3000
+
+#   Accessing Dashboard
 For CRUD operations, Dashboard can be accessed by entering navigating to https://localhost:3000 with the following credentials
 * Username: miguelsolans
 * Password: NotTellingYou  
   
 User permissions will be created, eventually  
   
-# License
+#   License
 Copyright (c) 2019, Miguel Solans
