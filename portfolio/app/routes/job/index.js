@@ -61,4 +61,24 @@ router.get('/delete-job/:id', (req, res) => {
         .catch(err => console.log(err));
 });
 
+
+// Update Education
+router.post('/update-job', (req, res) => {
+    const jobId = req.body.jobId;
+
+    var updateOps = {};
+    for(const [key, value] of Object.entries(req.body)){
+        updateOps[key] = value;
+    }
+
+    Job.update(
+        {_id:jobId},
+        {$set:updateOps})
+        .exec()
+        .then(result => {
+            res.render('login')
+        })
+        .catch(err => console.log(err))
+});
+
 module.exports = router;
