@@ -16,5 +16,5 @@ require.config({
 
 //Main module
 require(["renderer", "utils"], function () {
-    console.log("Main: loaded");
+    console.log("RequireJS Modules Loaded");
 });

@@ -28,10 +28,6 @@ router.get('/', function(req, res) {
             return;
         }
 
-        console.log(result.tags);
-
-        // var tags = ['landrover-offroad', 'programming', 'music-rock'];
-
         var tagTxt = "";
 
         if(result.tags.length > 0) {
