@@ -4,7 +4,7 @@
 <% if(education !== null) { %>
     <!-- Editing Education Form -->
     <h2 align="center">Editing Education</h2>
-    <form action="/update-education" method="POST">
+    <form action="/admin/update-education" method="POST">
         <label>School</label>
         <br>
         <input type="text" placeholder="school" name="school" value="<%= education.school %>">
@@ -24,7 +24,7 @@
 <% } else if (job !== null) { %>
     <h1 align="center">Editing Job</h1>
     <!-- Editing Job Form -->
-    <form action="/update-education" method="POST">
+    <form action="/admin/update-education" method="POST">
         <label>Company</label>
         <br>
         <input type="text" placeholder="school" name="school" value="<%= job.company %>">

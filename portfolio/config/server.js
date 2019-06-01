@@ -46,9 +46,16 @@ app.use(bodyParser.json());
 
 // Define Routes
 const PortfolioRoutes = require('../app/routes/');
+// Routes for CRUD operations
+const JobRoutes       = require('../app/routes/job/');
+const EducationRoutes = require('../app/routes/education/');
+const TagsRoutes      = require('../app/routes/tags/');
 
 // Webapp Portfolio Routes
 app.use('/', PortfolioRoutes);
+app.use('/admin', JobRoutes);
+app.use('/admin', EducationRoutes);
+app.use('/admin', TagsRoutes);
 
 // If any error occurs
 app.use(function(req, res) {
