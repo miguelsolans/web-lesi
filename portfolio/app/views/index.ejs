@@ -37,7 +37,7 @@
             <!-- Right Panel -->
             <div class="col-md-9">
                 <div class="container">
-                    <h2>Certificates</h2>
+                    <h2 align="center">Certificates</h2>
                     <div id="carousel-certificates" class="carousel slide" data-ride="carousel">
                         <div id="certificates-img" class="carousel-inner"><!--Images Go Here --></div>
                         <!-- Carousel nav -->
@@ -47,14 +47,14 @@
                         <!--<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>-->
                     </div>
                     <!--<div id="certificates-img"></div>-->
-                    <h2>Projects I've taken role</h2>
+                    <h2 align="center">Projects I've taken role</h2>
                     <!--<div id="projects-img"></div>-->
                     <div id="carousel-projects" class="carousel slide" data-ride="carousel">
                         <div id="projects-img" class="carousel-inner"><!--Images Go Here --></div>
                     </div>
 
-                    <h2>Personal Interests</h2>
-                    <h2>Music I've been listening</h2>
+                    <h2 align="center">Personal Interests</h2>
+                    <h2 align="center">Music I've been listening</h2>
                     <p>I consider music as an inspiration to any kind of work so I like to take inspiration out it, ranging from Classical to Soundtracks and even Rock and Metal to Pop from the 80s</p>
                     <div id="music"></div>
                 </div>
@@ -75,7 +75,7 @@
                     <ol class="educations">
                         <% for(var i in education) {%>
                             <li class="education">
-                                <span><%= education[i].school %> - </span>
+                                <span><a target="_blank" href="<%= education[i].link %>"><%= education[i].school %></a> - </span>
                                 <span><%= education[i].course %></span>
                             </li>
                         <% } %>
@@ -86,7 +86,7 @@
                         <% for(var i in job) {%>
                             <%if(job[i].flag === true) {%>
                                 <li class="job">
-                                    <span><%= job[i].company %> - </span>
+                                    <span><a target="_blank" href="<%= job[i].link %>"><%= job[i].company %></a> - </span>
                                     <span><%= job[i].description %></span>
                                 </li>
                             <% } %>
@@ -98,7 +98,7 @@
                         <% for(var i in job) {%>
                             <%if(job[i].flag === false) {%>
                                 <li class="job">
-                                    <span><%= job[i].company %> - </span>
+                                    <span><a target="_blank" href="<%= job[i].link %>"><%= job[i].company %></a> - </span>
                                     <span><%= job[i].description %></span>
                                 </li>
                             <% } %>

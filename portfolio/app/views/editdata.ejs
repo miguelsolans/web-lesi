@@ -27,15 +27,15 @@
     <form action="/admin/update-job" method="POST">
         <label>Company</label>
         <br>
-        <input type="text" placeholder="school" name="school" value="<%= job.company %>">
+        <input type="text" placeholder="Job" name="job" value="<%= job.company %>">
         <br>
         <label>Description</label>
         <br>
-        <input type="text" placeholder="course" name="course" value="<%= job.description %>">
+        <input type="text" placeholder="Description" name="description" value="<%= job.description %>">
         <br>
         <label>Link</label>
         <br>
-        <input type="text" placeholder="website" name="link" value="<%= job.link %>">
+        <input type="text" placeholder="Website" name="link" value="<%= job.link %>">
         <br>
         <select name="flag">
             <option value="true">True</option>
@@ -46,7 +46,19 @@
         <input name="jobId" type="text" hidden value="<%= job._id %>" >
     </form>
 
-<% } %>
+<% } else if (keyword) { %>
+    <h1>Editing Tag</h1>
+
+        <form action="/admin/update-tag" method="POST">
+            <label>Tag</label>
+            <br>
+            <input type="text" placeholder="Tag" name="tag" value="<%= keyword.tag %>">
+            <br>
+            <button class="btn btn-primary" type="submit">Update</button>
+            <input name="tagId" type="text" hidden value="<%= keyword._id %>" >
+        </form>
+
+    <% } %>
 </div>
 
 <%- include('partials/footer') %>

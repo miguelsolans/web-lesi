@@ -7,7 +7,10 @@ const mongoose  = require('mongoose');
 // Get Data Model Modules
 const Education = require('../../models/Education');
 
-// New Education
+/**
+ * CREATE OPERATIONS
+ * 1. Display form to create new Education
+ */
 router.post('/new-education', (req, res) => {
     const education = new Education({
         _id: new mongoose.Types.ObjectId(),
@@ -18,22 +21,29 @@ router.post('/new-education', (req, res) => {
 
     education.save()
         .then(result => {
-            res.render('admin');
+            Education.find().exec()
+                .then(result => res.render('edit', { education: result, job: null, keyword: null } ))
+                .catch(err => console.log(err));
         })
         .catch(err => console.log(err))
 });
 
-// Edit Education
+/**
+ * READ OPERATIONS
+ * 1. Display Education in a table
+ */
 router.get('/edit-education', (req, res) => {
     Education.find()
         .select()
         .exec()
         .then(docs => {
-            res.render('edit', { education: docs});
+            res.render('edit', { education: docs, job: null, keyword: null } );
         });
 });
 
-// Edit Education
+/**
+ * UPDATE OPERATIONS
+ */
 router.get('/edit-education/:id', (req, res) => {
     console.log(req.params.id);
 
@@ -41,11 +51,9 @@ router.get('/edit-education/:id', (req, res) => {
         .select()
         .exec()
         .then(docs => {
-            res.render('editdata', {education: docs});
+            res.render('editdata', { education: docs, job: null, keyword: null } );
         });
 });
-
-// Update Education
 router.post('/update-education', (req, res) => {
     const educationId = req.body.educationId;
 
@@ -55,16 +63,20 @@ router.post('/update-education', (req, res) => {
     }
 
     Education.update(
-        {_id:educationId},
-        {$set:updateOps})
+        { _id:educationId },
+        { $set:updateOps })
         .exec()
         .then(result => {
-            res.render('login')
+            Education.find().exec()
+                .then(result => res.render('edit', { education: result, job: null, keyword: null } ))
+                .catch(err => console.log(err));
         })
         .catch(err => console.log(err))
 });
 
-// Delete Education
+/**
+ * DELETE OPERATIONS
+ */
 router.get('/delete-education/:id', (req, res) => {
     const educationId = req.params.id;
     console.log(req.params);
@@ -74,7 +86,7 @@ router.get('/delete-education/:id', (req, res) => {
         .exec()
         .then(result => {
             Education.find().exec()
-                .then(result => res.render('edit', { education: result, job: null }))
+                .then(result => res.render('edit', { education: result, job: null, keyword: null } ))
                 .catch(err => console.log(err));
         })
         .catch(err => console.log(err));

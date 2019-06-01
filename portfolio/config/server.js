@@ -49,7 +49,7 @@ const PortfolioRoutes = require('../app/routes/');
 // Routes for CRUD operations
 const JobRoutes       = require('../app/routes/job/');
 const EducationRoutes = require('../app/routes/education/');
-const SettingsRoutes  = require('../app/routes/settings/')
+const SettingsRoutes  = require('../app/routes/settings/');
 // Webapp Portfolio Routes
 app.use('/', PortfolioRoutes);
 app.use('/admin', JobRoutes);

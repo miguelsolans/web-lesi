@@ -6,6 +6,7 @@ const https     = require('https');
 const fs        = require('fs');
 // App Serving Port
 let PORT = process.env.PORT || 3000;
+
 // Create HTTP server with self signed SSL on PORT
 https.createServer({
     key: fs.readFileSync('./ssl/server.key'),

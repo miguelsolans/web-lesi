@@ -42,7 +42,7 @@ define([
                 "<img src='" + imgUrl + "'>" +
                 "<div class='slide-caption'>" +
                 "<p>" + caption + "</p>" +
-                "<a class='btn btn-primary' href='" + url + "'>Link</a>" +
+                "<a class='btn btn-primary' target='_blank' href='" + url + "'>Link</a>" +
                 "</div>" +
                 "</div>";
         }
@@ -86,7 +86,7 @@ define([
                             "<img src='" + imgUrl + "'>" +
                             "<div class='slide-caption'>" +
                                 "<p>" + caption + "</p>" +
-                                "<a class='btn btn-primary' href='" + url + "'>Link</a>" +
+                                "<a class='btn btn-primary' target='_blank\' href='" + url + "'>Link</a>" +
                             "</div>" +
                         "</div>";
             } else {

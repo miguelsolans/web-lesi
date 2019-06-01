@@ -2,16 +2,39 @@
 
 <div class="container">
     <h1 align="center">Settings</h1>
+    <hr>
+    <h3>Keywords</h3>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Tags</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for(var i in keyword) {%>
+            <tr class="education">
+                <td><%= i %></td>
+                <td><%= keyword[i].tag %></td>
+                <td>
+                    <a href="/admin/edit-tag/<%= keyword[i]._id %>">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                </td>
+                <td>
+                    <a href="/admin/delete-tag/<%= keyword[i]._id %>">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </a>
+                </td>
+            </tr>
+        <% } %>
+        </tbody>
+    </table>
 
-    <form>
-        <input type="text" placeholder="Tag Name">
-        <button type="submit">Update</button>
-    </form>
-    <!--<a href="#">-->
-        <!--<span class="glyphicon glyphicon-plus"></span>-->
-    <!--</a>-->
+    <%- include('partials/forms/new-tag') %>
 
-    <button class="btn"><i class="glyphicon glyphicon-plus"></i>Add More</button>
 </div>
 
 <%- include('partials/footer') %>
