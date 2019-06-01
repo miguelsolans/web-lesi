@@ -8,4 +8,9 @@ const mongoose  = require('mongoose');
 const Tags       = require('../../models/Keywords');
 
 
+router.get('/settings', (req, res) => {
+    res.render('settings');
+});
+
+
 module.exports = router;

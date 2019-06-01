@@ -31,7 +31,6 @@ router.get('/edit-education', (req, res) => {
         .then(docs => {
             res.render('edit', { education: docs});
         });
-    // res.render('edit-education');
 });
 
 // Edit Education
