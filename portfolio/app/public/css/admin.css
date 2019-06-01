@@ -16,3 +16,7 @@
 .btn:hover {
     background-color: RoyalBlue;
 }
+
+input[type="text"] {
+    width: 100%;
+}

@@ -28,24 +28,30 @@ router.get('/', function(req, res) {
             return;
         }
 
-        var tagsNames = "";
+        console.log(result.tags);
 
-        for(var i in result.tags) {
-            var tag = result.tags[i].tag;
-            var tagArr = tag.split(';');
+        // var tags = ['landrover-offroad', 'programming', 'music-rock'];
 
-            for(var ii in tagArr) {
-                tagArr[ii] = tagArr[ii].replace(/\s/g, '+');
+        var tagTxt = "";
+
+        if(result.tags.length > 0) {
+            var tags = [];
+            // Remove white spaces and split by ;
+            for(var i in result.tags) {
+                result.tags[i].tag = result.tags[i].tag.replace(/\s/g, '');
+                tags.push(result.tags[i].tag.split(';'));
             }
-            tagsNames += result.tags[i].tag;
-        }
+            // Handy for handling white spaces in API
+            for(var i in tags)
+                tags[i] = tags[i].join('+');
 
-        console.log(tagsNames);
+            tagTxt = tags.join(",");
+        }
 
         res.render('index', {
             education: result.education,
             job: result.job,
-            tags: result.tags
+            tags: tagTxt
         });
     })
 });

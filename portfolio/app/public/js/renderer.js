@@ -110,7 +110,14 @@ define([
 
     $(document).ready(function() {
 
-        var tags = ['landrover-offroad', 'programming', 'music-rock'];
+        var keywords = document.getElementById('keywords').getAttribute("content");
+
+
+        //var tags = ['landrover-offroad', 'programming', 'music-rock'];
+        var tags = keywords.split(",");
+
+        console.log(tags);
+
         var unsplashQuery = "https://api.unsplash.com/search/photos?page=1&orientation=landscape&query=";
         var cnt = 0;
 
