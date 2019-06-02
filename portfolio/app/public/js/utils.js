@@ -95,9 +95,3 @@ define([
         }
     }
 });
-
-// getCaption: getCaption,
-// getLink: getLink,
-// getImgTag: getImgTag,
-// getCarouselHeader: getCarouselHeader,
-// getCarouselItem: getCarouselItem
