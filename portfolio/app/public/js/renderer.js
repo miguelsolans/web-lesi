@@ -139,10 +139,17 @@ define([
 
         $.getJSON('https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=miguelsolans&api_key=b9704a63e108fe1e52d55c0226ded89e&format=json', function(data) {
             console.log(data);
+            var albums = data.topalbums.album;
 
-            for(let i = 0; i < 6; i++) {
+            for(let i = 0; i < 12; i++) {
+                var active = i === 0 ? "active" : "";
+                var artistName = albums[i].artist.name,
+                    artistUrl  = albums[i].artist.url;
 
-                document.getElementById('music').innerHTML += utils.getImgTag(data.topalbums.album[i].image[3]["#text"]);
+                var tagContent = utils.getCarouselItem(albums[i].image[3]["#text"], artistName, artistUrl, active);
+
+                document.getElementById('music').innerHTML += tagContent;
+                // document.getElementById('music').innerHTML += utils.getImgTag(data.topalbums.album[i].image[3]["#text"]);
 
                 // var imgTag = "<img src=" + data.topalbums.album[i].image[3]["#text"] + ">";
                 // var artistInfo = "<p>" + data.topalbums.album[i].artist.name +"</p>";
