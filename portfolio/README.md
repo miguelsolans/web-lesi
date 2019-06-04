@@ -59,9 +59,11 @@ User permissions will be created, eventually
 #   To Do List
 Some features to be implemented in the future  
   
-| Feature                     | Priority       | Status     |
-| --------------------------- | -------------- | ---------- |
-| Dashboard Notifications     | High           | To Develop |
+| ID | Feature                              | Priority       | Status             |
+| -- | ------------------------------------ | -------------- | ------------------ |
+| 1  | Dashboard Notifications              | Medium         | To Develop         |
+| 2  | Allow users to create own portfolios | High           | To Develop         |
+| 3  | Portfolio Tehemes                    | Medium         | To Develop after 2 |
   
 #   License
 Copyright (c) 2019, Miguel Solans
