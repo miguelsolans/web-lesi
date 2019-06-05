@@ -63,7 +63,10 @@ Some features to be implemented in the future
 | -- | ------------------------------------ | -------------- | ------------------ |
 | 1  | Dashboard Notifications              | Medium         | To Develop         |
 | 2  | Allow users to create own portfolios | High           | To Develop         |
-| 3  | Portfolio Tehemes                    | Medium         | To Develop after 2 |
+| 3  | Portfolio Themes                     | Medium         | To Develop after 2 |
+| 4* | Export to Curriculumn Vitae          | Low            | To Develop         |
+  
+  * More fields need to be created on database
   
 #   License
 Copyright (c) 2019, Miguel Solans
