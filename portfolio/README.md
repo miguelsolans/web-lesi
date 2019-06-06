@@ -16,7 +16,7 @@ This project has been built and uses technologies and third party npm libraries 
 Besides npm and nodeJS, APIs such as:
 1. Instagram through Instafeed
 1. Facebook
-1. ~~LastFM~
+1. ~~LastFM~~
 
 To install all dependecies, it is mandatory to run the following command inside portfolio folder containing *package.json*
 
@@ -54,7 +54,19 @@ For CRUD operations, Dashboard can be accessed by entering navigating to https:/
 * Username: miguelsolans
 * Password: NotTellingYou  
   
-User permissions will be created, eventually  
+User permissions will be created, eventually
+
+#   To Do List
+Some features to be implemented in the future  
+  
+| ID | Feature                              | Priority       | Status             |
+| -- | ------------------------------------ | -------------- | ------------------ |
+| 1  | Dashboard Notifications              | Medium         | To Develop         |
+| 2  | Allow users to create own portfolios | High           | To Develop         |
+| 3  | Portfolio Themes                     | Medium         | To Develop after 2 |
+| 4* | Export to Curriculumn Vitae          | Low            | To Develop         |
+  
+  * More fields need to be created on database
   
 #   License
 Copyright (c) 2019, Miguel Solans
