@@ -9,19 +9,5 @@ Web Programming Projects
 | ------------- | -------------- |------------- | ----------- | --------- | --------- | ---------------------- |
 | Portfolio     | Final Project  | node server  | npm run dev | 3000      | Supported | https://localhost:3000 |
 
-# Installing Dependencies
-
-To install dependecies, run the following command
-
-```
-$ npm install
-```
-
-This project supports Dev mode using nodemon. To run in Dev mode, type 
-
-```
-$ npm run dev
-```
-
 # License
 Copyright (c) 2019, Miguel Solans
