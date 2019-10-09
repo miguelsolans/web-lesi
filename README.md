@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="402" height="102" src="https://ipca.pt/wp-content/uploads/2015/12/logo_est_normal_2.png"/>
+</p>
+
 # 	Multimedia and Web technology
 Web Programming Projects
 
