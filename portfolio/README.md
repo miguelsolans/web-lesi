@@ -24,13 +24,11 @@ To install all dependecies, it is mandatory to run the following command inside 
 $ npm install 
 ```
 
-#   Considerations Before Running
+#   Considerations Before Running  
 1. This project has a self signed SSL certificate until 18th of June 2019 therefore, to access this webapp,
 it is mandatory to type the following address (https://localhost:3000) after running the server.
-
 1. MongoDB has been published on Cloud. It might be required using VPN or you can simply switch to local server
 by commenting line 11 and uncommenting line 12 of server.js file
-
 
 
 #   Running
@@ -55,18 +53,6 @@ For CRUD operations, Dashboard can be accessed by entering navigating to https:/
 * Password: NotTellingYou  
   
 User permissions will be created, eventually
-
-#   To Do List
-Some features to be implemented in the future  
-  
-| ID | Feature                              | Priority       | Status             |
-| -- | ------------------------------------ | -------------- | ------------------ |
-| 1  | Dashboard Notifications              | Medium         | To Develop         |
-| 2  | Allow users to create own portfolios | High           | To Develop         |
-| 3  | Portfolio Themes                     | Medium         | To Develop after 2 |
-| 4* | Export to Curriculumn Vitae          | Low            | To Develop         |
-  
-  * More fields need to be created on database
   
 #   License
 Copyright (c) 2019, Miguel Solans
